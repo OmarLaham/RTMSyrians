@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-
+let Markers = new Mongo.Collection('markers');
 Meteor.startup(() => {
   // code to run on server at startup
 });
@@ -13,6 +13,10 @@ Meteor.methods({
       // TODO
    }
 });
+
+
+
+
 
 // Listen to incoming HTTP requests, can only be used on the server
 WebApp.connectHandlers.use(function(req, res, next) {
